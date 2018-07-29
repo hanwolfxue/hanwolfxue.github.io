@@ -1,13 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-test
+<div style="width: 1200px" id="imgBox">
+</div>
+<script type="text/javascript">
+  $(function () {
+    var imgArray = [
+      '/public/images/cartoon/cartoon1.jpg',
+      '/public/images/cartoon/cartoon2.jpg',
+      '/public/images/cartoon/cartoon3.jpg',
+      '/public/images/cartoon/cartoon4.jpg',
+      '/public/images/cartoon/cartoon5.jpg',
+      '/public/images/cartoon/cartoon6.jpg',
+      '/public/images/cartoon/cartoon7.jpg',
+      '/public/images/cartoon/cartoon8.jpg',
+      '/public/images/cartoon/cartoon9.jpg',
+      '/public/images/cartoon/cartoon10.jpg',
+      '/public/images/cartoon/cartoon11.jpg',
+      '/public/images/cartoon/cartoon12.jpg',
+      '/public/images/figure/figure1.jpg',
+      '/public/images/figure/figure2.jpg',
+      '/public/images/figure/figure3.jpg',
+      '/public/images/figure/figure4.jpg',
+      '/public/images/figure/figure5.jpg',
+      '/public/images/figure/figure6.jpg',
+      '/public/images/figure/figure7.jpg',
+      '/public/images/figure/figure8.jpg',
+      '/public/images/figure/figure9.jpg',
+      '/public/images/figure/figure10.jpg',
+    ]
+    imgArray.forEach(function (item) {
+      $('#imgBox').append('<img src="' + item + '" style="width: 100px;height: 100px;float: right">')
+    })
+  })
+</script>
+
+<script src="/public/js/utils.js"></script>
+<script src="/public/js/main.js"></script>
 </body>
 </html>
