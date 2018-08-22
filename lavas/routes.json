@@ -8,8 +8,18 @@
             "meta": {}
         },
         {
+            "path": "/detail/:id",
+            "name": "detailId",
+            "meta": {}
+        },
+        {
             "path": "/",
             "name": "index",
+            "meta": {}
+        },
+        {
+            "path": "/meiwenwang/test1",
+            "name": "meiwenwangTest1",
             "meta": {}
         },
         {

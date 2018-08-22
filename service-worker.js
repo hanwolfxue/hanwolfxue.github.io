@@ -4,6 +4,7 @@ importScripts('/static/js/workbox-sw.prod.v2.1.3.js');/**
  * @author yky(945281736@qq.com)
  */
 
+
 /* globals WorkboxSW */
 
 const workboxSW = new WorkboxSW({
@@ -17,22 +18,28 @@ const workboxSW = new WorkboxSW({
 workboxSW.precache([
   {
     "url": "/index.html",
-    "revision": "fb63aa451db572c714d7985984721676"
+    "revision": "0b68901b9f0284900c1eab93c40932d0"
   },
   {
-    "url": "/static/css/index.bd4cdc38.css"
+    "url": "/static/css/index.bf961af4.css"
   },
   {
-    "url": "/static/js/index.155197ac.js"
+    "url": "/static/img/1.2f231b55.jpg"
   },
   {
-    "url": "/static/js/manifest.7253881e.js"
+    "url": "/static/js/0.8e30eee0.js"
   },
   {
-    "url": "/static/js/vendor.3a66b0bd.js"
+    "url": "/static/js/index.80ed2bcd.js"
   },
   {
-    "url": "/static/js/vue.0e0f6ce8.js"
+    "url": "/static/js/manifest.543812d4.js"
+  },
+  {
+    "url": "/static/js/vendor.871abd5f.js"
+  },
+  {
+    "url": "/static/js/vue.8e5a89a6.js"
   },
   {
     "url": "/static/js/workbox-sw.prod.v2.1.3.js",
@@ -47,7 +54,13 @@ workboxSW.router.registerNavigationRoute('/index.html');
  */
 // workboxSW.router.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workboxSW.strategies.networkFirst());
+// Define runtime cache.
 
+workboxSW.router.registerRoute(new RegExp('https://query\.yahooapis\.com/v1/public/yql'),
+    workboxSW.strategies.networkFirst());
+
+workboxSW.router.registerRoute(new RegExp('https://www.3dmgame.com/games/'),
+    workboxSW.strategies.networkFirst());
 
 /**
  * example runningCache with resources from CDN
