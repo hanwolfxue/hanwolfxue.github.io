@@ -1,7 +1,7 @@
 {
     "start_url": "/?utm_source=homescreen",
-    "name": "lavas-githubpages",
-    "short_name": "lavas-githubpages",
+    "name": "pwa-yky-iris",
+    "short_name": "yky-iris",
     "icons": [
         {
             "src": "img/icons/android-chrome-512x512.png",
