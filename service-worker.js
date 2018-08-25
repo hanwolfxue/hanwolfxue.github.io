@@ -18,19 +18,16 @@ const workboxSW = new WorkboxSW({
 workboxSW.precache([
   {
     "url": "/index.html",
-    "revision": "0b68901b9f0284900c1eab93c40932d0"
+    "revision": "91b40f7370db2ebe4473c27831702a6a"
   },
   {
-    "url": "/static/css/index.bf961af4.css"
-  },
-  {
-    "url": "/static/img/1.2f231b55.jpg"
+    "url": "/static/css/index.73baf99b.css"
   },
   {
     "url": "/static/js/0.8e30eee0.js"
   },
   {
-    "url": "/static/js/index.80ed2bcd.js"
+    "url": "/static/js/index.afa6650d.js"
   },
   {
     "url": "/static/js/manifest.543812d4.js"
@@ -59,8 +56,8 @@ workboxSW.router.registerNavigationRoute('/index.html');
 workboxSW.router.registerRoute(new RegExp('https://query\.yahooapis\.com/v1/public/yql'),
     workboxSW.strategies.networkFirst());
 
-workboxSW.router.registerRoute(new RegExp('https://www.3dmgame.com/games/'),
-    workboxSW.strategies.networkFirst());
+// workboxSW.router.registerRoute(new RegExp('https://tcc\.taobao\.com/cc/json'),
+//     workboxSW.strategies.networkFirst());
 
 /**
  * example runningCache with resources from CDN
