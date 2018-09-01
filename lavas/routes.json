@@ -23,6 +23,11 @@
             "meta": {}
         },
         {
+            "path": "/memorabilia/google",
+            "name": "memorabiliaGoogle",
+            "meta": {}
+        },
+        {
             "path": "/error",
             "name": "error",
             "meta": {},

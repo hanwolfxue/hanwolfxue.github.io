@@ -18,16 +18,16 @@ const workboxSW = new WorkboxSW({
 workboxSW.precache([
   {
     "url": "/index.html",
-    "revision": "e0896b59820056b8f900d51fab187513"
+    "revision": "7531928e6c98a0677d3f3e8a2f42a966"
   },
   {
-    "url": "/static/css/index.73baf99b.css"
+    "url": "/static/css/index.a4042792.css"
   },
   {
     "url": "/static/js/0.8e30eee0.js"
   },
   {
-    "url": "/static/js/index.b60257a1.js"
+    "url": "/static/js/index.be23114e.js"
   },
   {
     "url": "/static/js/manifest.543812d4.js"
