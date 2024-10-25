@@ -59,7 +59,7 @@
   // 要加载的资源数组
   const resources = [
     {
-      url: "https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js",
+      url: "https://hanwolfxue.github.io/libs/jquery.min.js",
       type: "script",
       name: "jQuery",
     },
@@ -69,11 +69,11 @@
       name: "_",
     },
     {
-      url: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+      url: "https://hanwolfxue.github.io/libs/bootstrap.min.css",
       type: "link",
     },
     {
-      url: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+      url: "https://hanwolfxue.github.io/libs/bootstrap.bundle.min.js",
       type: "script",
     },
   ];
