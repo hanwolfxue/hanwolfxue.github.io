@@ -64,7 +64,7 @@
       name: "jQuery",
     },
     {
-      url: "https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.core.min.js",
+      url: "https://hanwolfxue.github.io/libs/lodash.min.js",
       type: "script",
       name: "_",
     },
