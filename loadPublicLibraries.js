@@ -57,15 +57,20 @@
   // 调用函数
   loadLodash();
 
-  function loadCSS(url) {
+  function loadCSS(url, callback) {
     var link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = url;
+    link.onload = callback;
     document.head.appendChild(link);
   }
 
   loadCSS(
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+    function () {
+      console.log("Bootstrap CSS loaded and ready to use.");
+      // 这里可以执行依赖于Bootstrap JS的代码
+    }
   );
 
   function loadScript(url, callback) {
