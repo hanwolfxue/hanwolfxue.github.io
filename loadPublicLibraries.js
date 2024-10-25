@@ -8,7 +8,7 @@
       // 创建<script>元素
       var script = document.createElement("script");
       script.src =
-        "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
+        "https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js";
       script.type = "text/javascript";
 
       // 绑定加载完成后的事件
@@ -37,7 +37,8 @@
     } else {
       // 创建<script>元素
       var script = document.createElement("script");
-      script.src = "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js";
+      script.src =
+        "https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js";
       script.type = "text/javascript";
 
       // 绑定加载完成后的事件
@@ -55,4 +56,30 @@
 
   // 调用函数
   loadLodash();
+
+  function loadCSS(url) {
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = url;
+    document.head.appendChild(link);
+  }
+
+  loadCSS(
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  );
+
+  function loadScript(url, callback) {
+    var script = document.createElement("script");
+    script.src = url;
+    script.onload = callback;
+    document.body.appendChild(script);
+  }
+
+  loadScript(
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+    function () {
+      console.log("Bootstrap JS loaded and ready to use.");
+      // 这里可以执行依赖于Bootstrap JS的代码
+    }
+  );
 })();
