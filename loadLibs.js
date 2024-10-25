@@ -79,13 +79,28 @@
   ];
 
   // 使用Promise.all来同时加载所有资源
-  Promise.all(resources.map((item) => loadResource(item)))
-    .then(() => {
-      console.log("所有资源都已加载完成");
-      // 在这里执行所有资源加载完成后的操作
-    })
-    .catch((error) => {
-      console.error("加载资源时出错:", error);
-    });
+  // Promise.all(resources.map((item) => loadResource(item)))
+  //   .then(() => {
+  //     console.log("所有资源都已加载完成");
+  //     // 在这里执行所有资源加载完成后的操作
+  //   })
+  //   .catch((error) => {
+  //     console.error("加载资源时出错:", error);
+  //   });
+
+  async function asyncFunction() {
+    // 使用 await 等待 Promise.all 完成
+    const result = await Promise.all(
+      resources.map((item) => loadResource(item))
+    );
+    // 可以返回 Promise.all 的结果
+    return result;
+  }
+  window.asyncFunction = asyncFunction;
+
+  // 在其他地方调用 asyncFunction
+  // asyncFunction().then((result) => {
+  //   console.log(result); // 这里会打印 [promise1的值, promise2的值, promise3的值]
+  // });
   // Your code here...
 })();
